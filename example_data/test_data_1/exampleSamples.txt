@@ -1,0 +1,13 @@
+Samples	Group	Other_Group
+Condition1-Rep1	group1	other_group1
+Condition1-Rep2	group1	other_group1
+Condition1-Rep3	group1	other_group1
+Condition2-Rep1	group2	other_group1
+Condition2-Rep2	group2	other_group2
+Condition2-Rep3	group2	other_group2
+Condition3-Rep1	group3	other_group2
+Condition3-Rep2	group3	other_group2
+Condition3-Rep3	group3	other_group3
+Condition4-Rep1	group4	other_group3
+Condition4-Rep2	group4	other_group3
+Condition4-Rep3	group4	other_group3
