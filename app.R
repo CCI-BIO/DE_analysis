@@ -1,17 +1,18 @@
 # DEanalysis Rshiny app
-# Shiny app to streamline DGE script written by Chelsea Mayoh
+# Shiny app to streamline DGE script originally written by Chelsea Mayoh
 # 
 # Created by Nisitha Jayatilleke
 # Date: 19/03/2019
-# Last Updated: 13/05/2019 
+# Last Updated: 06/08/2020
 
-##### BIOCONDUCTOR INSTALL
+# Install Bioconductor packages
 Bioconductor_list <- c("edgeR", "ComplexHeatmap", "clusterProfiler", "RDAVIDWebService", "AnnotationDbi", "GO.db", "KEGG.db", "org.Hs.eg.db", "org.Mm.eg.db", "pathview")
 for(i in 1:length(Bioconductor_list)){
   if(!requireNamespace(Bioconductor_list[i], quietly = TRUE)){
     BiocManager::install(Bioconductor_list[i], update = FALSE)
   }
 }
+
 # Import relevant libraries
 library(shiny) # CRAN
 library(shinyjs) # CRAN
@@ -31,7 +32,7 @@ library(RDAVIDWebService) # Bioconductor
 library(enrichR) # CRAN
 library(httr) # CRAN
 library(V8) # CRAN
-library(pathview) #Bioconductor
+library(pathview) # Bioconductor
 
 # Increase max file size
 options(shiny.maxRequestSize = 500*1024^2)
