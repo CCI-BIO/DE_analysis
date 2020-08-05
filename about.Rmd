@@ -1,0 +1,120 @@
+---
+title: "about"
+author: "Nisitha Jayatilleke"
+date: "22 March 2019"
+output: html_document
+---
+
+## About:
+
+This app was designed to streamline the RNA-seq DGE pipeline written by Chelsea Mayoh. The user can manipulate the parameters and data used in the analysis and specify which comparison they would like to test.
+
+<br />
+
+#### Change log
+
+##### v1.0 - 22/03/2019
+
+* Inital release
+
+##### V1.01 - 22/03/2019
+
+* Added Instructions page
+
+##### v1.02 - 25/03/2019
+
+* Added images to Instructions page
+* Created launcher to avoid having to load R/Rstudio (will run in default browser)
+
+##### v1.03 - 25/03/2019
+
+* Added average replicate heatmaps for significant P-values in addition to signficant FDR.
+
+##### v1.04 - 08/04/2019
+
+* Changed installation method to account for different versions of R, Bioconductor and different installation locations.
+* Now saves PCA plot (from sample selection stage) coloured by the groupings being compared (saves a separate file labelled with the group category ie. "Group_PCA_plot.png").
+* Included extra parameters to adjust heatmap clustering methods (distance metric and agglomerative method).
+* Included the ability to select any combination of group colourings on heatmap colour bar. 
+
+##### v1.05 - 29/04/2019
+
+* Added option to download PCA plot in step 2. 
+* Added options to display row names on each heatmap plot generated in step 3.
+* Added option to select if Z-score row scaling is applied to the data prior to constructing the heatmap in step 3.
+* Added step 4 to generate selected custom plots based on the output of the DEanalysis program. Included custom plots are the volcano plots and heatmaps. 
+
+##### v1.06 - 13/05/2019
+
+* Added option to select KEGG/GO enrichment methods via DAVID, in-built clusterProfiler functions or enrichr.
+* Added option in step 4 to generate enrichment bar plots based on the relevant KEGG/GO outputs from the analysis.
+
+##### v1.07 - 07/08/2019
+
+* Adjusted descriptions and instructions page
+* Fixed bug where inputting a single group metafile would show errors under the additional colour bar selection area in step 3.
+* Fixed issue with bar plots and enrichR
+* Updated enrichR to 2.1 via github (manual update since CRAN version 2.0 is bugged)
+
+##### v1.08 - 22/08/2019
+
+* Added option to switch direction of enrichment bar plots
+* Added option to include gene overlap fractions in enrichment bar plots
+* Added pathview package to construct KEGG plots with overlapping DE data
+
+<br />
+
+#### Last updated:
+
+07/08/2019
+
+<br />
+
+#### Package citations:
+
+* Dean Attali (2018). shinyjs: Easily Improve the User Experience of Your Shiny Apps in Seconds. R package version 1.0. https://CRAN.R-project.org/package=shinyjs
+* Marc Carlson (2018). org.Mm.eg.db: Genome wide annotation for Mouse. R package version 3.7.0.
+* Marc Carlson (2018). org.Hs.eg.db: Genome wide annotation for Human. R package version 3.7.0.
+* Winston Chang, Joe Cheng, JJ Allaire, Yihui Xie and Jonathan McPherson (2018). shiny: Web Application Framework for R. R package version 1.2.0. https://CRAN.R-project.org/package=shiny
+* Gu, Z. Complex heatmaps reveal patterns and correlations in multidimensional genomic data. Bioinformatics 2016.
+* Masaaki Horikoshi and Yuan Tang (2016). ggfortify: Data Visualization Tools for Statistical Analysis Results.https://CRAN.R-project.org/package=ggfortify
+* Wajid Jawaid (2017). enrichR: Provides an R Interface to 'Enrichr'. R package version 1.0. https://CRAN.R-project.org/package=enrichR
+* Cristobal Fresno, Elmer A. Fernandez (2013). RDAVIDWebService: a versatile R interface to DAVID Bioinformatics, 29(21), 2810-2811. URL http://bioinformatics.oxfordjournals.org/content/29/21/2810.
+* McCarthy DJ, Chen Y and Smyth GK (2012). Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation. Nucleic Acids Research 40, 4288-4297
+* Thomas Lin Pedersen, Vincent Nijs, Thomas Schaffner and Eric Nantz (2018). shinyFiles: A Server-Side File System Viewer for Shiny. R package version 0.7.2. https://CRAN.R-project.org/package=shinyFiles
+* Robinson MD, McCarthy DJ and Smyth GK (2010). edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics 26, 139-140
+* Kamil Slowikowski (2018). ggrepel: Automatically Position Non-Overlapping Text Labels with 'ggplot2'. R package version 0.8.0. https://CRAN.R-project.org/package=ggrepel
+* Yuan Tang, Masaaki Horikoshi, and Wenxuan Li. "ggfortify: Unified Interface to Visualize Statistical Result of Popular R Packages." The R Journal 8.2 (2016): 478-489.
+* Gregory R. Warnes, Ben Bolker, Lodewijk Bonebakker, Robert Gentleman, Wolfgang Huber Andy Liaw, Thomas Lumley, Martin Maechler, Arni Magnusson, Steffen Moeller, Marc Schwartz and Bill Venables (2019). gplots: Various R Programming Tools for Plotting Data. R package version 3.0.1.1. https://CRAN.R-project.org/package=gplots
+* Gregory R. Warnes, Ben Bolker and Thomas Lumley (2018). gtools: Various R Programming Tools. R package version 3.8.1. https://CRAN.R-project.org/package=gtools
+* H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2016.
+* Hadley Wickham (2018). httr: Tools for Working with URLs and HTTP. R package version 1.4.0. https://CRAN.R-project.org/package=httr
+* Yihui Xie (2014) knitr: A Comprehensive Tool for Reproducible Research in R. In Victoria Stodden, Friedrich Leisch and Roger D. Peng, editors, Implementing Reproducible Computational Research. Chapman and Hall/CRC. ISBN 978-1466561595
+* Yihui Xie (2015) Dynamic Documents with R and knitr. 2nd edition. Chapman and Hall/CRC. ISBN 978-1498716963
+* Yihui Xie (2019). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.22.
+* Guangchuang Yu, Li-Gen Wang, Yanyan Han and Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology 2012, 16(5):284-287
+* Luo, Weijun, Brouwer, Cory (2013). "Pathview: an R/Bioconductor package for pathway-based data integration and visualization." Bioinformatics, 29(14), 1830-1831. doi: 10.1093/bioinformatics/btt285.
+
+<br />
+
+#### Acknowledgements:
+
+Testers and Support:
+
+* Janith Seneviratne 
+* Patrick Connerty
+* Walter Muskovic
+* Pooja Venkat
+* Narges Bayat
+* Ayan Saha
+
+<br />
+
+#### Contacts:
+
+Author: Nisitha Jayatilleke <br />
+Email: NJayatilleke@ccia.org.au
+
+Chelsea Mayoh <br />
+Email: CMayoh@ccia.org.au
+
